@@ -1302,6 +1302,7 @@ Footer Widgets
 .footer-widgets {
   background-color: #000;
   clear: both;
+  padding-bottom: 40px;
   padding-top: 40px;
 }
 .footer-widgets,
@@ -1323,7 +1324,9 @@ Footer Widgets
 .footer-widgets .widget {
   margin-bottom: 40px;
 }
-.footer-widgets p:last-child {
+.footer-widgets p:last-child,
+.footer-widgets ul > li:last-child,
+.footer-widgets .widget:last-child {
   margin-bottom: 0;
 }
 
@@ -1352,6 +1355,7 @@ Site Footer
 .site-footer {
   background-color: #fff;
   font-size: 16px;
+  line-height: 1;
   padding: 40px 0;
   text-align: center;
 }
