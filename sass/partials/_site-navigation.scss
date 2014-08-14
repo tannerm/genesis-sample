@@ -51,11 +51,11 @@
 
 	.menu-item:hover {
 		position: static;
-	}
-
-	.menu-item:hover > .sub-menu {
-		left: auto;
-		opacity: 1;
+		
+		> .sub-menu {
+			left: auto;
+			opacity: 1;
+		}
 	}
 
 	> .first > a {
