@@ -11,7 +11,7 @@
 	}
 
 	a {
-		color: #000;
+		color: #333;
 		display: block;
 		padding: 30px 24px;
 	}
@@ -51,11 +51,11 @@
 
 	.menu-item:hover {
 		position: static;
-	}
-
-	.menu-item:hover > .sub-menu {
-		left: auto;
-		opacity: 1;
+		
+		> .sub-menu {
+			left: auto;
+			opacity: 1;
+		}
 	}
 
 	> .first > a {
@@ -100,7 +100,7 @@
 		}
 	}
 
-	li li {
+	.genesis-nav-menu li li {
 		margin-left: 0;
 	}
 }
@@ -109,14 +109,14 @@
 --------------------------------------------- */
 
 .nav-primary {
-	background-color: #000;
+	background-color: #333;
 
 	a {
 		color: #fff;
 	}
 
 	.sub-menu a {
-		color: #000;
+		color: #333;
 	}
 
 	a:hover,
