@@ -30,6 +30,15 @@ That's it! You're now ready to use Grunt!
 
 - `grunt watch` - Will watch for changes and then compile Sass and JS
 
+## Better Script Management
+
+This fork also enqueues Live Reload for extensionless live reloading while using Grunt Watch. It also does a check to see if the `SCRIPT_DEBUG` constant is present in `wp_config.php`.
+
+To load minified versions of styles and scripts add this to `wp_config.php`:
+
+`define('SCRIPT_DEBUG', TRUE);`  <-- will load un-minified files
+`define('SCRIPT_DEBUG', FALSE);` <-- will load minified files
+
 ## Theme Support
 
 Please visit http://my.studiopress.com/help/ for theme support.
