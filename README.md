@@ -10,7 +10,7 @@ This fork includes Sass and Grunt (and even the Grunt sound). I *try* to keep it
 - Install Node: http://nodejs.org/
 - Install Grunt: `npm install -g grunt-cli`
 - Clone this repository: `git@github.com:gregrickaby/genesis-sample.git`
-- Navigate to the cloned repository's directory in Terminal:
+- Navigate to the cloned repository's directory:
 `cd /applications/MAMP/htdocs/genesis-sample`
 - Type: `npm install`
 
@@ -23,7 +23,7 @@ That's it! You're now ready to use Grunt!
 ## Using Grunt
 
 - `grunt styles` - Will compile Sass, auto prefix, css comb, and then minify style.css to style.min.css
-- `grunt javascript` - Will concatonate scripts, and then minify
+- `grunt javascript` - Will concatenate scripts, and then minify them
 - `grunt imageminnewer` - Will PNG Smush (optimize) all images
 
 - `grunt` - Will run all tasks mentioned above
@@ -32,7 +32,7 @@ That's it! You're now ready to use Grunt!
 
 ## Better Script Management
 
-I've created a `/js/` folder and inside it a `/partials/` folder. Any scripts placed into the partials folder will be concantinated and placed into `project.js` when you run `grunt` or `grunt javascript`.
+I've created a `/js/` folder and inside it a `/partials/` folder. Any scripts placed into the partials folder will be concatenated and placed into `project.js` when you run `grunt` or `grunt javascript`.
 
 This fork also enqueues Live Reload for extensionless live reloading while using Grunt Watch. It also does a check to see if the `SCRIPT_DEBUG` constant is present in `wp_config.php`.
 
