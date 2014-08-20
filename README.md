@@ -1,17 +1,35 @@
-=== Genesis Sample Theme with SASS ===
+=======
+# Genesis Sample Theme (with Sass & Grunt)
 
 Github project link: https://github.com/gregrickaby/genesis-sample/tree/sass
 
-This is my fork of the Genesis Sample Theme. I've added Sass, and *try* to keep it up to date with Genesis 2.0 development.
+This fork includes Sass and Grunt (and even the Grunt sound). I *try* to keep it up to date with Genesis 2.0 development. Your pull requests are welcome. Now, go get Sassy!
 
-=== Installation Instructions ===
+## Theme Installation Instructions
 
-1. Upload the Genesis Sample theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
-2. Go to your WordPress dashboard and select Appearance.
-3. Activate the Genesis Sample theme.
-4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
+- Install Node: http://nodejs.org/
+- Install Grunt: `npm install -g grunt-cli`
+- Clone this repository: `git@github.com:gregrickaby/genesis-sample.git`
+- Navigate to the cloned repository's directory in Terminal:
+`cd /applications/MAMP/htdocs/genesis-sample`
+- Type: `npm install`
 
+The Node Package Manager will now install all the required dependencies for Grunt.
 
-=== Theme Support ===
+![How to use Grunt](http://i.imgur.com/D2yoFdu.gif)
+
+That's it! You're now ready to use Grunt!
+
+## Using Grunt
+
+- `grunt styles` - Will compile Sass, auto prefix, css comb, and then minify style.css to style.min.css
+- `grunt javascript` - Will concatonate scripts, and then minify
+- `grunt imageminnewer` - Will PNG Smush (optimize) all images
+
+- `grunt` - Will run all tasks mentioned above
+
+- `grunt watch` - Will watch for changes and then compile Sass and JS
+
+## Theme Support
 
 Please visit http://my.studiopress.com/help/ for theme support.
