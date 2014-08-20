@@ -32,6 +32,8 @@ That's it! You're now ready to use Grunt!
 
 ## Better Script Management
 
+I've created a `/js/` folder and inside it a `/partials/` folder. Any scripts placed into the partials folder will be concantinated and placed into `project.js` when you run `grunt` or `grunt javascript`.
+
 This fork also enqueues Live Reload for extensionless live reloading while using Grunt Watch. It also does a check to see if the `SCRIPT_DEBUG` constant is present in `wp_config.php`.
 
 To load minified versions of styles and scripts add this to `wp_config.php`:
