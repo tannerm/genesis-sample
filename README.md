@@ -36,8 +36,8 @@ This fork also enqueues Live Reload for extensionless live reloading while using
 
 To load minified versions of styles and scripts add this to `wp_config.php`:
 
-`define('SCRIPT_DEBUG', TRUE);`  <-- will load un-minified files
-`define('SCRIPT_DEBUG', FALSE);` <-- will load minified files
+- `define('SCRIPT_DEBUG', TRUE);`  <-- will load un-minified files
+- `define('SCRIPT_DEBUG', FALSE);` <-- will load minified files
 
 ## Theme Support
 
