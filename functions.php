@@ -13,7 +13,7 @@ function genesis_sample_scripts() {
 
 	$minnified = '.min';
 
-	//* Should we load minified scripts? Also enqueue live reload to allow for extensionless reloading with 'grunt watch'
+	//* Should we load minified scripts? Also enqueue live reload to allow for extensionless reloading with 'grunt watch'.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG == true ) {
 
 		$minnified = '';
@@ -29,7 +29,7 @@ function genesis_sample_scripts() {
 	wp_dequeue_style( 'genesis-sample-theme' );
 
 	//* Add compiled CSS
-	wp_register_style( 'genesis-sample-styles', get_stylesheet_directory_uri() . '/style' . $minnified . '.css' );
+	wp_register_style( 'genesis-sample-styles', get_stylesheet_directory_uri() . '/style' . $minnified . '.css', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'genesis-sample-styles' );
 
 	//* Add compiled JS
