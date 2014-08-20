@@ -37,7 +37,7 @@
 		a {
 			background-color: #fff;
 			border: 1px solid #eee;
-			border-top: none;
+			border-top: 0;
 			font-size: 14px;
 			padding: 20px;
 			position: relative;
@@ -51,7 +51,7 @@
 
 	.menu-item:hover {
 		position: static;
-		
+
 		> .sub-menu {
 			left: auto;
 			opacity: 1;
