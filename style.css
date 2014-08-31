@@ -604,10 +604,21 @@ blockquote::before
     content: '\201C';
 }
 
+/* line 85, sass/partials/_defaults.scss */
+
+pre
+{
+    font-size: 14px;
+
+    padding: 24px;
+
+    background-color: #f5d5d5;
+}
+
 /* Headings
 --------------------------------------------- */
 
-/* line 89, sass/partials/_defaults.scss */
+/* line 95, sass/partials/_defaults.scss */
 
 h1,
 h2,
@@ -625,42 +636,42 @@ h6
     color: black;
 }
 
-/* line 102, sass/partials/_defaults.scss */
+/* line 108, sass/partials/_defaults.scss */
 
 h1
 {
     font-size: 36px;
 }
 
-/* line 106, sass/partials/_defaults.scss */
+/* line 112, sass/partials/_defaults.scss */
 
 h2
 {
     font-size: 30px;
 }
 
-/* line 110, sass/partials/_defaults.scss */
+/* line 116, sass/partials/_defaults.scss */
 
 h3
 {
     font-size: 24px;
 }
 
-/* line 114, sass/partials/_defaults.scss */
+/* line 120, sass/partials/_defaults.scss */
 
 h4
 {
     font-size: 20px;
 }
 
-/* line 118, sass/partials/_defaults.scss */
+/* line 124, sass/partials/_defaults.scss */
 
 h5
 {
     font-size: 18px;
 }
 
-/* line 122, sass/partials/_defaults.scss */
+/* line 128, sass/partials/_defaults.scss */
 
 h6
 {
@@ -670,7 +681,7 @@ h6
 /* Objects
 --------------------------------------------- */
 
-/* line 129, sass/partials/_defaults.scss */
+/* line 135, sass/partials/_defaults.scss */
 
 embed,
 iframe,
@@ -682,14 +693,14 @@ video,
     max-width: 100%;
 }
 
-/* line 138, sass/partials/_defaults.scss */
+/* line 144, sass/partials/_defaults.scss */
 
 img
 {
     height: auto;
 }
 
-/* line 142, sass/partials/_defaults.scss */
+/* line 148, sass/partials/_defaults.scss */
 
 .featured-content img,
 .gallery img
@@ -700,7 +711,7 @@ img
 /* Forms
 --------------------------------------------- */
 
-/* line 150, sass/partials/_defaults.scss */
+/* line 156, sass/partials/_defaults.scss */
 
 input,
 select,
@@ -717,7 +728,7 @@ textarea
     background-color: #fff;
 }
 
-/* line 162, sass/partials/_defaults.scss */
+/* line 168, sass/partials/_defaults.scss */
 
 input:focus,
 textarea:focus
@@ -726,7 +737,7 @@ textarea:focus
     outline: none;
 }
 
-/* line 168, sass/partials/_defaults.scss */
+/* line 174, sass/partials/_defaults.scss */
 
 input[type='checkbox'],
 input[type='image'],
@@ -735,7 +746,7 @@ input[type='radio']
     width: auto;
 }
 
-/* line 174, sass/partials/_defaults.scss */
+/* line 180, sass/partials/_defaults.scss */
 
 ::-moz-placeholder
 {
@@ -745,7 +756,7 @@ input[type='radio']
     color: #000;
 }
 
-/* line 180, sass/partials/_defaults.scss */
+/* line 186, sass/partials/_defaults.scss */
 
 ::-webkit-input-placeholder
 {
@@ -754,7 +765,7 @@ input[type='radio']
     color: #000;
 }
 
-/* line 185, sass/partials/_defaults.scss */
+/* line 191, sass/partials/_defaults.scss */
 
 button,
 input[type='button'],
@@ -776,7 +787,7 @@ input[type='submit'],
     background-color: #000;
 }
 
-/* line 202, sass/partials/_defaults.scss */
+/* line 208, sass/partials/_defaults.scss */
 
 .footer-widgets button,
 .footer-widgets input[type='button'],
@@ -788,7 +799,7 @@ input[type='submit'],
     background-color: #e5554e;
 }
 
-/* line 212, sass/partials/_defaults.scss */
+/* line 218, sass/partials/_defaults.scss */
 
 button:hover,
 input:hover[type='button'],
@@ -800,14 +811,14 @@ input:hover[type='submit'],
     background-color: #e5554e;
 }
 
-/* line 221, sass/partials/_defaults.scss */
+/* line 227, sass/partials/_defaults.scss */
 
 .entry-content .button:hover
 {
     color: #fff;
 }
 
-/* line 226, sass/partials/_defaults.scss */
+/* line 232, sass/partials/_defaults.scss */
 
 .footer-widgets button:hover,
 .footer-widgets input:hover[type='button'],
@@ -819,14 +830,14 @@ input:hover[type='submit'],
     background-color: #fff;
 }
 
-/* line 236, sass/partials/_defaults.scss */
+/* line 242, sass/partials/_defaults.scss */
 
 .button
 {
     display: inline-block;
 }
 
-/* line 240, sass/partials/_defaults.scss */
+/* line 246, sass/partials/_defaults.scss */
 
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button
@@ -837,7 +848,7 @@ input[type='search']::-webkit-search-results-button
 /* Tables
 --------------------------------------------- */
 
-/* line 248, sass/partials/_defaults.scss */
+/* line 254, sass/partials/_defaults.scss */
 
 table
 {
@@ -850,14 +861,14 @@ table
     border-collapse: collapse;
 }
 
-/* line 256, sass/partials/_defaults.scss */
+/* line 262, sass/partials/_defaults.scss */
 
 tbody
 {
     border-bottom: 1px solid #ddd;
 }
 
-/* line 260, sass/partials/_defaults.scss */
+/* line 266, sass/partials/_defaults.scss */
 
 td,
 th
@@ -865,7 +876,7 @@ th
     text-align: left;
 }
 
-/* line 265, sass/partials/_defaults.scss */
+/* line 271, sass/partials/_defaults.scss */
 
 td
 {
@@ -874,7 +885,7 @@ td
     border-top: 1px solid #ddd;
 }
 
-/* line 270, sass/partials/_defaults.scss */
+/* line 276, sass/partials/_defaults.scss */
 
 th
 {

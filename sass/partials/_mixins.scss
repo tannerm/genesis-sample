@@ -2,7 +2,6 @@
 // Mixins
 //--------------------------------------------------------------
 
-
 // Transition
 // Usage: @include transition(all, 0.2s, ease-in-out);
 @mixin transition($transition-property, $transition-time, $method) {
