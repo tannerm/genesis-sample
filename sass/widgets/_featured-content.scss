@@ -4,7 +4,7 @@
 .featured-content {
 
 	.entry {
-		border-bottom: 2px solid #f5f5f5;
+		border-bottom: 2px solid $color-whitesmoke;
 		margin-bottom: 20px;
 		padding: 0 0 24px;
 	}
@@ -16,6 +16,6 @@
 }
 
 .footer-widgets .entry {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted $color-dove-gray;
 }
 

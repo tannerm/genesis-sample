@@ -5,13 +5,13 @@
 	overflow: hidden;
 
 	img {
-		border: 1px solid #ddd;
+		border: 1px solid $color-alto;
 		height: auto;
 		padding: 4px;
 
 		&:hover,
 		&:focus {
-			border: 1px solid #999;
+			border: 1px solid $color-dusty-gray;
 		}
 	}
 }

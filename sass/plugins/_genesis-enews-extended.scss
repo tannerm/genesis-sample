@@ -3,15 +3,15 @@
 --------------------------------------------- */
 
 .enews-widget {
-	color: #fff;
+	color: $color-white;
 
 	.widget-title {
-		color: #fff;
+		color: $color-white;
 	}
 
 	input,
 	input:focus {
-		border: 1px solid #333;
+		border: 1px solid $color-mine-shaft;
 	}
 
 	input {
@@ -21,21 +21,21 @@
 	}
 
 	input[type="submit"] {
-		background-color: #c3251d;
-		color: #fff;
+		background-color: $color-thunderbird;
+		color: $color-white;
 		margin: 0;
 		width: 100%;
 	}
 
 	input:hover[type="submit"],
 	input:focus[type="submit"]  {
-		background-color: #fff;
-		color: #333;
+		background-color: $color-white;
+		color: $color-mine-shaft;
 	}
 }
 
 .sidebar .widget.enews-widget {
-	background-color: #333;
+	background-color: $color-mine-shaft;
 }
 
 .enews form + p {

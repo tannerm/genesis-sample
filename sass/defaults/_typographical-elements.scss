@@ -11,8 +11,8 @@ body > div {
 }
 
 body {
-	background-color: #f5f5f5;
-	color: #333;
+	background-color: $color-whitesmoke;
+	color: $color-mine-shaft;
 	font-family: Lato, sans-serif;
 	font-size: 18px;
 	font-size: 1.8rem;
@@ -38,12 +38,12 @@ textarea:focus,
 }
 
 a {
-	color: #c3251d;
+	color: $color-thunderbird;
 	text-decoration: underline;
 
 	&:hover,
 	&:focus {
-		color: #333;
+		color: $color-mine-shaft;
 		text-decoration: none;
 	}
 }
@@ -66,7 +66,7 @@ li {
 hr {
 	border: 0;
 	border-collapse: collapse;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid $color-alto;
 	clear: both;
 	margin: 1em 0;
 }

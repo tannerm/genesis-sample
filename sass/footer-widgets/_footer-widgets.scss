@@ -2,27 +2,27 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: #333;
+	background-color: $color-mine-shaft;
 	clear: both;
 	padding-top: 40px;
 
 	&,
 	a {
-		color: #aaa;
+		color: $color-silver-chalice;
 	}
 
 	input {
-		border: 1px solid #333;
+		border: 1px solid $color-mine-shaft;
 	}
 
 	a.button,
 	a:hover,
 	a:focus {
-		color: #fff;
+		color: $color-white;
 	}
 
 	li {
-		border-bottom: 1px dotted #666;
+		border-bottom: 1px dotted $color-dove-gray;
 		margin-bottom: 10px;
 		padding-bottom: 10px;
 	}

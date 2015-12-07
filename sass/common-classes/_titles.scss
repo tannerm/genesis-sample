@@ -11,17 +11,17 @@
 	font-size: 3.6rem;
 
 	a {
-		color: #333;
+		color: $color-mine-shaft;
 
 		&:hover,
 		&:focus {
-			color: #c3251d;
+			color: $color-thunderbird;
 		}
 	}
 }
 
 .sidebar .widget-title a {
-	color: #333;
+	color: $color-mine-shaft;
 }
 
 .widget-title {
@@ -31,5 +31,5 @@
 }
 
 .footer-widgets .widget-title {
-	color: #fff;
+	color: $color-white;
 }
