@@ -11,15 +11,14 @@ module.exports = function(grunt) {
 		 * Compile Sass into CSS using node-sass.
 		 *
 		 * @link https://github.com/sindresorhus/grunt-sass
+		 * @link https://github.com/sass/node-sass#options
 		 */
 		sass: {
 			options: {
-				outputStyle: 'expanded',
-				sourceComments: true,
-				sourceMap: true,
-				includePaths: [
-					'node_modules/node-bourbon/app/assets/stylesheets'
-				]
+				outputStyle: 'expanded', // Determines the output format of the final CSS style.
+				sourceComments: false, // Enables additional debugging information in the output file as CSS comments.
+				sourceMap: true, // Enables the outputting of a source map.
+				includePaths: require('node-bourbon').includePaths, // Include Bourbon
 			},
 			dist: {
 				files: {

@@ -30,7 +30,7 @@ input[type="submit"],
 textarea:focus,
 .button,
 .gallery img {
-	@include transition(all .1s, ease-in-out);
+	@include transition(all .1s ease-in-out);
 }
 
 a {
