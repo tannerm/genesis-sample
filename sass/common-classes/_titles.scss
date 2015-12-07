@@ -2,13 +2,11 @@
 --------------------------------------------- */
 
 .archive-title {
-	font-size: 20px;
-	font-size: 2rem;
+	font-size: rem(20);
 }
 
 .entry-title {
-	font-size: 36px;
-	font-size: 3.6rem;
+	font-size: rem(360;
 
 	a {
 		color: $color-mine-shaft;
@@ -25,8 +23,7 @@
 }
 
 .widget-title {
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: rem(18);
 	margin-bottom: 20px;
 }
 

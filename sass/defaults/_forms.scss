@@ -7,8 +7,7 @@ textarea {
 	background-color: $color-white;
 	border: 1px solid $color-alto;
 	color: $color-mine-shaft;
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: rem(18);
 	font-weight: 300;
 	padding: 16px;
 	width: 100%;
@@ -46,8 +45,7 @@ input[type="submit"],
 	border: 0;
 	color: $color-white;
 	cursor: pointer;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: rem(16);
 	font-weight: 300;
 	padding: 16px 24px;
 	text-transform: uppercase;
