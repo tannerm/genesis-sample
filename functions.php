@@ -33,7 +33,7 @@ function genesis_sample_scripts() {
 	wp_enqueue_style( 'genesis-sample-theme' );
 
 	//* Add compiled JS
-	wp_enqueue_script( 'genesis-sample-scripts', get_stylesheet_directory_uri() . '/js/project' . $minnified . '.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'genesis-sample-scripts', get_stylesheet_directory_uri() . '/js/script' . $minnified . '.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
 
 }

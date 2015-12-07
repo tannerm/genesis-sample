@@ -1,158 +1,184 @@
 module.exports = function(grunt) {
 
-	// load all grunt tasks in package.json matching the `grunt-*` pattern
+	// Load all grunt tasks in package.json matching the `grunt-*` pattern.
 	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
 
 		pkg: grunt.file.readJSON('package.json'),
 
-		githooks: {
-			all: {
-				'pre-commit': 'default'
-			}
-		},
-
-		csscomb: {
-			dist: {
-				files: [{
-					expand: true,
-					cwd: '',
-					src: ['*.css'],
-					dest: '',
-				}]
-			}
-		},
-
+		/**
+		 * Compile Sass into CSS using node-sass.
+		 *
+		 * @link https://github.com/sindresorhus/grunt-sass
+		 */
 		sass: {
+			options: {
+				outputStyle: 'expanded',
+				sourceComments: true,
+				sourceMap: true,
+				includePaths: [
+					'node_modules/node-bourbon/app/assets/stylesheets'
+				]
+			},
 			dist: {
-				options: {
-					style: 'expanded',
-					lineNumbers: true,
-				},
 				files: {
 					'style.css': 'sass/style.scss'
 				}
 			}
 		},
 
-		autoprefixer: {
+		/**
+		 * Apply several post-processors to CSS using PostCSS.
+		 *
+		 * @link https://github.com/nDmitry/grunt-postcss
+		 */
+		postcss: {
 			options: {
-				browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
-			},
+				map: true,
+				processors: [
+					require('autoprefixer')({ browsers: 'last 2 versions' })
+			]},
 			dist: {
-				src:  'style.css'
+				src: ['style.css', '!*.min.js']
 			}
 		},
 
-		cmq: {
+		/**
+		 * A modular minifier, built on top of the PostCSS ecosystem.
+		 *
+		 * @link https://github.com/ben-eb/cssnano
+		 */
+		cssnano: {
 			options: {
-				log: false
+				autoprefixer: false,
+				safe: true,
 			},
 			dist: {
 				files: {
-					'style.css': 'style.css'
+					'style.min.css': 'style.css'
 				}
 			}
 		},
 
-		cssmin: {
-			minify: {
-				expand: true,
-				cwd: '',
-				src: ['*.css', '!*.min.css'],
-				dest: '',
-				ext: '.min.css'
-			}
-		},
-
+		/**
+		 * Concatenate files.
+		 *
+		 * @link https://github.com/gruntjs/grunt-contrib-concat
+		 */
 		concat: {
 			dist: {
-				src: [
-					'js/partials/*.js'
-				],
-				dest: 'js/project.js',
+				src: ['js/concat/*.js'],
+				dest: 'js/script.js',
 			}
 		},
 
+		/**
+		 * Minify files with UglifyJS.
+		 *
+		 * @link https://github.com/gruntjs/grunt-contrib-uglify
+		 */
 		uglify: {
 			build: {
 				options: {
+					sourceMap: true,
 					mangle: false
 				},
 				files: [{
 					expand: true,
 					cwd: 'js/',
-					src: ['*.js', '!*.min.js', '!/*.js'],
+					src: ['**/*.js', '!**/*.min.js', '!concat/*.js'],
 					dest: 'js/',
 					ext: '.min.js'
 				}]
 			}
 		},
 
+		/**
+		 * Optimize PNG, JPG, and GIF images.
+		 *
+		 * @link https://github.com/gruntjs/grunt-contrib-imagemin
+		 */
 		imagemin: {
 			dynamic: {
 				files: [{
 					expand: true,
 					cwd: 'images/',
-					src: ['*.{png,jpg,gif}'],
+					src: ['**/*.{png,jpg,gif}'],
 					dest: 'images/'
 				}]
 			}
 		},
 
+		/**
+		 * Run tasks whenever watched files change.
+		 *
+		 * @link https://github.com/gruntjs/grunt-contrib-watch
+		 */
 		watch: {
 
 			scripts: {
 				files: ['js/**/*.js'],
-				tasks: ['javascript', 'shell:grunt'],
-				options: {
-					spawn: false,
-				},
-			},
-
-			css: {
-				files: ['sass/partials/*.scss'],
-				tasks: ['styles', 'shell:grunt'],
+				tasks: ['javascript'],
 				options: {
 					spawn: false,
 					livereload: true,
 				},
 			},
 
+			css: {
+				files: ['sass/**/*.scss'],
+				tasks: ['styles'],
+				options: {
+					spawn: false,
+					livereload: true,
+				},
+			},
+
+			images: {
+				files: ['images/*'],
+				tasks: ['imageminnewer'],
+				options: {
+					spawn: false,
+					livereload: true,
+				},
+			},
 		},
 
+		/**
+		 * Run shell commands.
+		 *
+		 * @link https://github.com/sindresorhus/grunt-shell
+		 */
 		shell: {
 			grunt: {
-				command: 'afplay grunt.mp3'
+				command: '',
 			}
 		},
 
-		clean: {
-			js: ['js/project*', 'js/**/*.min.js'],
-			css: ['style.css', 'style.min.css']
+		/**
+		 * Automatic Notifications when Grunt tasks fail.
+		 *
+		 * @link https://github.com/dylang/grunt-notify
+		 */
+		notify_hooks: {
+			options: {
+				enabled: true,
+				max_jshint_notifications: 5,
+				title: "genesis",
+				success: false,
+				duration: 2,
+			}
 		},
-
-		update_submodules: {
-
-			default: {
-				options: {
-					// default command line parameters will be used: --init --recursive
-				}
-			},
-			withCustomParameters: {
-				options: {
-					params: '--force' // specifies your own command-line parameters
-				}
-			},
-
-		}
-
 	});
 
-	grunt.registerTask('styles', ['sass', 'autoprefixer', 'cmq', 'csscomb', 'cssmin']);
+	// Register Grunt tasks.
+	grunt.registerTask('styles', ['sass', 'postcss', 'cssnano']);
 	grunt.registerTask('javascript', ['concat', 'uglify']);
 	grunt.registerTask('imageminnewer', ['newer:imagemin']);
-	grunt.registerTask('default', ['update_submodules', 'styles', 'javascript', 'imageminnewer']);
+	grunt.registerTask('default', ['styles', 'javascript', 'imageminnewer']);
 
+	// grunt-notify shows native notifications on errors.
+	grunt.loadNpmTasks('grunt-notify');
+	grunt.task.run('notify_hooks');
 };
