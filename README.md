@@ -18,33 +18,60 @@ Basic knowledge of the command line and the following must be installed on your 
 
 * Node & NPM [http://nodejs.org/](http://nodejs.org/)
 * Grunt & Grunt CLI [http://gruntjs.com/](http://gruntjs.com/)
-  * ```bash npm install -g grunt-cli```
+  *  `npm install -g grunt-cli`
 
 ## Installation
 
-1. [Download](https://github.com/gregrickaby/genesis-sample/archive/master.zip) or [clone](https://github.com/gregrickaby/genesis-sample.git) this repository and place it into your theme directory:
+[Download](https://github.com/gregrickaby/genesis-sample/archive/master.zip) or [clone](https://github.com/gregrickaby/genesis-sample.git) this repository and place it into your theme directory:
 
-  * ```bash wordpress/wp-content/themes/genesis-sample```
+```bash
+wordpress/wp-content/themes/genesis-sample
+```
 
-1. Using the terminal, navigate to your theme directory:
+Using the terminal, navigate to your theme directory:
 
-  * ```bash cd wordpress/wp-content/themes/genesis-sample```
+```bash
+cd wordpress/wp-content/themes/genesis-sample
+```
 
-1. Install Grunt dependencies:
+Install Grunt dependencies:
 
-  * `npm install`
-
+```bash
+npm install
+```
 
 ![How to use Grunt](https://dl.dropbox.com/s/hic5rpb6b5kv4i2/genesis-sample-theme-setup.gif?dl=0)
 
-
 ## Usage
 
-* `grunt watch` - Will watch for changes and automatically refresh your browser using LiveReload.
-* `grunt styles` - Will compile Sass, autoprefix, and then create a production ready, minified stylesheet.
-* `grunt javascript` - Will concatenate script and create a production ready, minified  script.
-* `grunt imageminnewer` - Will optimize images located in `/images`
-* `grunt` - Will run all tasks mentioned above.
+```bash
+grunt watch
+```
+
+Will watch for changes and automatically refresh your browser using LiveReload.
+
+```bash
+grunt styles
+```
+Will compile Sass, autoprefix, and then create a production ready, minified stylesheet.
+
+```bash
+grunt javascript
+```
+
+Will concatenate script and create a production ready, minified script.
+
+```bash
+grunt imageminnewer
+```
+
+Will optimize images located in `/images`
+
+```bash
+grunt
+```
+
+Will run all tasks mentioned above.
 
 ## Notes
 
@@ -58,9 +85,11 @@ All scripts placed into `/concat` will be concatenated and placed into `project.
 
 ### Script Managment
 
-To load production ready (minified) versions of styles and scripts add this to `wp_config.php`:
+To load production ready (minified) versions of styles and scripts add this to `wp_config.php`
 
-  * `define('SCRIPT_DEBUG', TRUE);`
+```bash
+define('SCRIPT_DEBUG', TRUE);
+```
 
 ## Support
 
