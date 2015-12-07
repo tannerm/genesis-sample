@@ -5,35 +5,35 @@
 	background-color: #333;
 	clear: both;
 	padding-top: 40px;
-}
 
-.footer-widgets,
-.footer-widgets a {
-	color: #aaa;
-}
+	&,
+	a {
+		color: #aaa;
+	}
 
-.footer-widgets input {
-	border: 1px solid #333;
-}
+	input {
+		border: 1px solid #333;
+	}
 
-.footer-widgets a.button,
-.footer-widgets a:hover,
-.footer-widgets a:focus {
-	color: #fff;
-}
+	a.button,
+	a:hover,
+	a:focus {
+		color: #fff;
+	}
 
-.footer-widgets li {
-	border-bottom: 1px dotted #666;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-}
+	li {
+		border-bottom: 1px dotted #666;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
 
-.footer-widgets .widget {
-	margin-bottom: 40px;
-}
+	.widget {
+		margin-bottom: 40px;
+	}
 
-.footer-widgets p:last-child {
-	margin-bottom: 0;
+	p:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .footer-widgets-1,

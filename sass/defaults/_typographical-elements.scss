@@ -40,12 +40,12 @@ textarea:focus,
 a {
 	color: #c3251d;
 	text-decoration: underline;
-}
 
-a:hover,
-a:focus {
-	color: #333;
-	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: #333;
+		text-decoration: none;
+	}
 }
 
 p {
@@ -85,15 +85,15 @@ i {
 
 blockquote {
 	margin: 40px;
-}
 
-blockquote::before {
-	content: "\201C";
-	display: block;
-	font-size: 30px;
-	font-size: 3rem;
-	height: 0;
-	left: -20px;
-	position: relative;
-	top: -10px;
+	&::before {
+		content: "\201C";
+		display: block;
+		font-size: 30px;
+		font-size: 3rem;
+		height: 0;
+		left: -20px;
+		position: relative;
+		top: -10px;
+	}
 }

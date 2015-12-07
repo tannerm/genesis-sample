@@ -33,24 +33,30 @@ li.comment {
 	word-wrap: break-word;
 }
 
-.comment-list li {
-	margin-top: 24px;
-	padding: 32px;
+.comment-list {
+
+	li {
+		margin-top: 24px;
+		padding: 32px;
+	}
+
+	li li {
+		margin-right: -32px;
+	}
 }
 
-.comment-list li li {
-	margin-right: -32px;
-}
+.comment-respond {
 
-.comment-respond input[type="email"],
-.comment-respond input[type="text"],
-.comment-respond input[type="url"] {
-	width: 50%;
-}
+	input[type="email"],
+	input[type="text"],
+	input[type="url"] {
+		width: 50%;
+	}
 
-.comment-respond label {
-	display: block;
-	margin-right: 12px;
+	label {
+		display: block;
+		margin-right: 12px;
+	}
 }
 
 .entry-comments .comment-author {
@@ -62,6 +68,7 @@ li.comment {
 }
 
 .bypostauthor {
+	display: block;
 }
 
 .form-allowed-tags {

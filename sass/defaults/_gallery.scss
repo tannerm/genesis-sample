@@ -3,6 +3,17 @@
 
 .gallery {
 	overflow: hidden;
+
+	img {
+		border: 1px solid #ddd;
+		height: auto;
+		padding: 4px;
+
+		&:hover,
+		&:focus {
+			border: 1px solid #999;
+		}
+	}
 }
 
 .gallery-item {
@@ -41,15 +52,4 @@
 
 .gallery-columns-9 .gallery-item {
 	width: 11.1111%;
-}
-
-.gallery img {
-	border: 1px solid #ddd;
-	height: auto;
-	padding: 4px;
-}
-
-.gallery img:hover,
-.gallery img:focus {
-	border: 1px solid #999;
 }

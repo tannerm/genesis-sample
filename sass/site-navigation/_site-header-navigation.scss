@@ -1,14 +1,17 @@
 /* ## Site Header Navigation
 --------------------------------------------- */
 
-.site-header .sub-menu {
-	border-top: 1px solid #eee;
-}
+.site-header {
 
-.site-header .sub-menu .sub-menu {
-	margin-top: -56px;
-}
+	.sub-menu {
+		border-top: 1px solid #eee;
 
-.site-header .genesis-nav-menu li li {
-	margin-left: 0;
+		.sub-menu {
+			margin-top: -56px;
+		}
+	}
+
+	.genesis-nav-menu li li {
+		margin-left: 0;
+	}
 }
