@@ -16,9 +16,8 @@ This fork includes modern development tools like Grunt, Sass, PostCSS, and Bourb
 
 Basic knowledge of the command line and the following must be installed on your local machine:
 
-* Node & NPM [http://nodejs.org/](http://nodejs.org/)
-* Grunt & Grunt CLI [http://gruntjs.com/](http://gruntjs.com/)
-  *  `npm install -g grunt-cli`
+* Node [http://nodejs.org/](http://nodejs.org/)
+* Grunt CLI `npm install -g grunt-cli`
 
 ## Installation
 
@@ -48,24 +47,24 @@ npm install
 grunt watch
 ```
 
-Will watch for changes and automatically refresh your browser using LiveReload.
+Watch for changes and automatically refresh your browser using LiveReload.
 
 ```bash
 grunt styles
 ```
-Will compile Sass, autoprefix, and then create a production ready, minified stylesheet.
+Compile Sass, autoprefix, and then create a production ready stylesheet.
 
 ```bash
 grunt javascript
 ```
 
-Will concatenate script and create a production ready, minified script.
+Concatenate scripts and create a production ready script.
 
 ```bash
 grunt imageminnewer
 ```
 
-Will optimize images located in `/images`
+Optimize images located in `/images`
 
 ```bash
 grunt
@@ -77,18 +76,24 @@ Will run all tasks mentioned above.
 
 ###Sass Mixins
 
-[Bourbon](http://bourbon.io/) is included! Now there is a large library of Sass mixins ready to go. Read up on all the [available mixins](http://bourbon.io/docs/).
+[Bourbon](http://bourbon.io/) is included! Now there is a large [library of Sass mixins](http://bourbon.io/docs/) that you can tap into.
 
 ###Javascript
 
 All scripts placed into `/concat` will be concatenated and placed into `project.js`.
 
-### Script Managment
+### Script Management
 
-To load production ready (minified) versions of styles and scripts add this to `wp_config.php`
+To load a development version (unminified) of styles and scripts add this to `wp_config.php`
 
 ```bash
 define('SCRIPT_DEBUG', TRUE);
+```
+
+To load a production ready (minified) version of styles and scripts add this to `wp_config.php`
+
+```bash
+define('SCRIPT_DEBUG', FALSE);
 ```
 
 ## Support
