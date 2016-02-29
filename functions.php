@@ -26,14 +26,14 @@ function genesis_sample_scripts() {
 	wp_enqueue_style( 'google-fonts' );
 
 	//* Remove default stylesheet
-	wp_register_style( 'genesis-sample-theme' );
+	wp_deregister_style( 'genesis-sample-theme' );
 
 	//* Add compiled stylesheet
-	wp_register_style( 'genesis-sample-theme', get_stylesheet_directory_uri() . '/style' . $minnified . '.css', array(), CHILD_THEME_VERSION );
+	wp_register_style( 'genesis-sample-theme', get_stylesheet_directory_uri() . '/style' . $suffix . '.css', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'genesis-sample-theme' );
 
 	//* Add compiled JS
-	wp_enqueue_script( 'genesis-sample-scripts', get_stylesheet_directory_uri() . '/js/script' . $minnified . '.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'genesis-sample-scripts', get_stylesheet_directory_uri() . '/js/script' . $suffix . '.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
 
 }
