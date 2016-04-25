@@ -252,9 +252,9 @@ gulp.task('wp-pot', ['clean:pot'], function() {
 	.pipe(plumber({ errorHandler: handleErrors }))
 	.pipe(sort())
 	.pipe(wpPot({
-		domain: 'genesis',
+		domain: 'genesis-sample',
 		destFile:'genesis-sample.pot',
-		package: 'genesis',
+		package: 'genesis-sample',
 		bugReport: 'http://genesis-sample.com',
 		lastTranslator: 'John Doe <mail@genesis-sample.com>',
 		team: 'Team <mail@genesis-sample.com>'
