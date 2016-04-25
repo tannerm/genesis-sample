@@ -1,21 +1,11 @@
 /* ## Typographical Elements
 --------------------------------------------- */
 
-html {
-    font-size: 62.5%; /* 10px browser default */
-}
-
-/* Chrome fix */
-body > div {
-    font-size: 1.8rem;
-}
-
 body {
 	background-color: $color-whitesmoke;
 	color: $color-mine-shaft;
 	font-family: Lato, sans-serif;
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: rem(18);
 	font-weight: 300;
 	line-height: 1.625;
 	margin: 0;
@@ -64,7 +54,7 @@ hr {
 	border-collapse: collapse;
 	border-top: 1px solid $color-alto;
 	clear: both;
-	margin: 1em 0;
+	margin: 16px 0;
 }
 
 b,
@@ -83,13 +73,11 @@ blockquote {
 	margin: 40px;
 
 	&::before {
+		@include position(relative, -10px null null -20px);
+
 		content: "\201C";
 		display: block;
-		font-size: 30px;
-		font-size: 3rem;
+		font-size: rem(30);
 		height: 0;
-		left: -20px;
-		position: relative;
-		top: -10px;
 	}
 }
