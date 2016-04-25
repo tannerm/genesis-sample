@@ -1,5 +1,5 @@
-Genesis Sample Theme
-===
+# Genesis Sample Theme with Gulp & Sass
+
 
 Hi!
 
@@ -58,13 +58,7 @@ From the command line, type any of the following to perform an action:
 
 ### What about Grunt?
 
-Grunt is still available (but wont be supported going forward)
-
-1) Delete both `Gulpfile.js` and `package.json`
-
-2) Rename `package-grunt.json` -> `package.json` 
-
-3) Run `npm install` like normal
+Grunt is still available, but wont be supported going forward. [Download](https://github.com/gregrickaby/genesis-sample/tree/v2.2.2-grunt) the [Grunt branch](https://github.com/gregrickaby/genesis-sample/tree/v2.2.2-grunt).
 
 ## Support
 
