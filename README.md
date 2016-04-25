@@ -1,100 +1,70 @@
-Genesis Sample Theme with Sass
+Genesis Sample Theme
 ===
 
-This fork includes modern development tools like Grunt, Sass, PostCSS, and Bourbon. I *try* to keep it up to date with Genesis 2.0+ development. Your pull requests are welcome. Now, go get Sassy!
+Hi!
 
-## Features
-* [Grunt](https://github.com/gruntjs/grunt)
-* [Sass](https://github.com/sass/node-sass) (LibSass)
-* [PostCSS](https://github.com/postcss/postcss)
-* [Bourbon](http://bourbon.io/)
-* [LiveReload](https://github.com/livereload/LiveReload)
-* Image optimization
-* Script linting and CSS minifcation
+I'm a fork of the official [Genesis Sample](https://github.com/copyblogger/genesis-sample) theme, but with modern build tools like: [Gulp](http://gulpjs.com/), [LibSass](http://sass-lang.com/), [PostCSS](https://github.com/postcss/postcss), [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [BrowserSync](https://www.browsersync.io/) to help make your development process fast and efficient. 
 
-## Pre-Installation
+## Getting Started
 
-Basic knowledge of the command line and the following must be installed on your local machine:
+### Prerequisites
 
-* Node [http://nodejs.org/](http://nodejs.org/)
-* Grunt CLI `npm install -g grunt-cli`
+Because I'm bundled with Gulp, basic knowledge of the command line and the following dependencies are required: [Node](http://nodejs.org/) and [Gulp CLI](https://github.com/gulpjs/gulp-cli) (`npm install -g gulp-cli`).
 
-## Installation
+### Installation Instructions
+[Download This Theme](https://github.com/gregrickaby/genesis-sample/archive/master.zip) (.zip)
 
-[Download](https://github.com/gregrickaby/genesis-sample/archive/master.zip) or [clone](https://github.com/gregrickaby/genesis-sample.git) this repository and place it into your theme directory:
+1. Add the Genesis Sample theme folder in the wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
+2. Go to your WordPress dashboard and select Appearance.
+3. Activate the Genesis Sample theme.
+4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
 
-```bash
-wordpress/wp-content/themes/genesis-sample
-```
+## Development
 
-Using the terminal, navigate to your theme directory:
+After you've installed and activated me. It's time to setup Gulp.
+
+1) From the command line, change directories to your new theme directory
 
 ```bash
-cd wordpress/wp-content/themes/genesis-sample
+cd /your-project/wordpress/wp-content/themes/genesis-sample
 ```
 
-Install Grunt dependencies:
+2) Install Node dependencies
 
 ```bash
 npm install
 ```
+![Install and Gulp](https://dl.dropbox.com/s/xceger83jq5tncw/genesis-sample-theme-gulp.gif?dl=0)
 
-![How to use Grunt](https://dl.dropbox.com/s/hic5rpb6b5kv4i2/genesis-sample-theme-setup.gif?dl=0)
+### Gulp Tasks
 
-## Usage
+From the command line, type any of the following to perform an action:
 
-```bash
-grunt watch
-```
+`gulp watch` - Automatically handle changes to CSS, JS, SVGs, and image sprites. Also kicks off BrowserSync.
 
-Watch for changes and automatically refresh your browser using LiveReload.
+`gulp icons` - Minify, concatenate, and clean SVG icons.
 
-```bash
-grunt styles
-```
-Compile Sass, autoprefix, and then create a production ready stylesheet.
+`gulp i18n` - Scan the theme and create a POT file
 
-```bash
-grunt javascript
-```
+`gulp sass:lint` - Run Sass against WordPress code standards
 
-Concatenate scripts and create a production ready script.
+`gulp scripts` - Concatenate and minify javascript files
 
-```bash
-grunt imageminnewer
-```
+`gulp sprites` - Generate an image sprite and the associated Sass (sprite.png)
 
-Optimize images located in `/images`
+`gulp styles` - Compile, prefix, combine media queries, and minify CSS files
 
-```bash
-grunt
-```
+`gulp` - Runs the following tasks at the same time: i18n, icons, scripts, styles, sprites
 
-Will run all tasks mentioned above.
+### What about Grunt?
 
-## Notes
+Grunt is still available (but wont be supported going forward)
 
-###Sass Mixins
+1) Delete both `Gulpfile.js` and `package.json`
 
-[Bourbon](http://bourbon.io/) is included! Now there is a large [library of Sass mixins](http://bourbon.io/docs/) that you can tap into.
+2) Rename `package-grunt.json` -> `package.json` 
 
-###Javascript
-
-All scripts placed into `/concat` will be concatenated and placed into `project.js`.
-
-### Script Management
-
-To load a development version (unminified) of styles and scripts add this to `wp_config.php`
-
-```bash
-define('SCRIPT_DEBUG', TRUE);
-```
-
-To load a production ready (minified) version of styles and scripts add this to `wp_config.php`
-
-```bash
-define('SCRIPT_DEBUG', FALSE);
-```
+3) Run `npm install` like normal
 
 ## Support
 
