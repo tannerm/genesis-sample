@@ -1,18 +1,18 @@
 /* ## Accessible Menu
 --------------------------------------------- */
 
-.menu {
+.menu .menu-item:focus {
+	position: static;
+}
 
-	.menu-item {
+.menu .menu-item > a:focus + ul.sub-menu,
+.menu .menu-item.sfHover > ul.sub-menu {
+	left: auto;
+	opacity: 1;
+}
 
-		&:focus {
-			position: static;
-		}
-
-		& > a:focus + ul.sub-menu,
-		&.sfHover > ul.sub-menu {
-			left: auto;
-			opacity: 1;
-		}
-	}
+.sub-menu-toggle,
+.menu-toggle {
+	display: none;
+	visibility: hidden;
 }

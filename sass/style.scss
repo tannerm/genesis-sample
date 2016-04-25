@@ -1,6 +1,6 @@
-/* # Genesis Sample Child Theme
+/* Genesis Sample Child Theme
 Theme Name: Genesis Sample Theme
-Theme URI: http://my.studiopress.com/themes/genesis/
+Theme URI: http://www.studiopress.com/
 Description: This is the sample theme created for the Genesis Framework.
 Author: StudioPress
 Author URI: http://www.studiopress.com/
@@ -11,8 +11,7 @@ License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-
-/* # Table of Contents
+/* Table of Contents
 - HTML5 Reset
 	- Baseline Normalize
 	- Box Sizing
@@ -40,15 +39,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Plugins
 	- Genesis eNews Extended
 	- Jetpack
+- Skip Links
 - Site Header
 	- Title Area
 	- Widget Area
 - Site Navigation
 	- Accessible Menu
 	- Site Header Navigation
-	- Primary Navigation
-	- Secondary Navigation
-	- Skip Links
+	- After Header Navigation
+	- Footer Navigation
 - Content Area
 	- Entries
 	- Entry Meta
@@ -59,10 +58,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Site Footer
 - Media Queries
 	- Retina Display
-	- Max-width: 1200px
-	- Max-width: 960px
-	- Max-width: 800px
-	- Print
+	- Max-width: 1280px
+	- Max-width: 1023px
+	- Max-width: 880px
+- Print Styles
 */
 
 @import "utilities/variables/index";
@@ -76,6 +75,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "common-classes/index";
 @import "widgets/index";
 @import "plugins/index";
+@import "skip-links/index";
 @import "site-header/index";
 @import "site-navigation/index";
 @import "content-area/index";

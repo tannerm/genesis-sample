@@ -4,7 +4,11 @@
 .title-area {
 	float: left;
 	padding: 10px 0;
-	width: 360px;
+	width: 300px;
+}
+
+.header-image .title-area {
+	padding: 0;
 }
 
 .header-full-width .title-area {
@@ -12,26 +16,28 @@
 }
 
 .site-title {
-	font-size: rem(32);
-	font-weight: 400;
+	font-size: 30px;
+	font-size: 3rem;
+	font-weight: 900;
 	line-height: 1.2;
 }
 
 .site-title a,
 .site-title a:hover,
 .site-title a:focus {
-	color: $color-mine-shaft;
+	color: #333;
+	text-decoration: none;
 }
 
 .header-image .site-title > a {
-	background: url(images/logo.png) no-repeat left;
 	float: left;
-	min-height: 60px;
+	min-height: 80px;
 	width: 100%;
 }
 
 .site-description {
-	font-size: rem(16);
+	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 300;
 	line-height: 1.5;
 }

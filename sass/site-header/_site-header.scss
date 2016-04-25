@@ -2,10 +2,10 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: $color-white;
-	min-height: 160px;
+	background-color: #fff;
+	min-height: 120px;
+}
 
-	.wrap {
-		padding: 40px 0;
-	}
+.site-header .wrap {
+	padding: 20px 0;
 }

@@ -2,31 +2,29 @@
 --------------------------------------------- */
 
 .archive-title {
-	font-size: rem(20);
+	font-size: 20px;
+	font-size: 2rem;
 }
 
 .entry-title {
-	font-size: rem(36);
-
-	a {
-		color: $color-mine-shaft;
-
-		&:hover,
-		&:focus {
-			color: $color-thunderbird;
-		}
-	}
+	font-size: 36px;
+	font-size: 3.6rem;
 }
 
+.entry-title a,
 .sidebar .widget-title a {
-	color: $color-mine-shaft;
+	color: #333;
+	text-decoration: none;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+	color: #cc3d25;
 }
 
 .widget-title {
-	font-size: rem(18);
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: 700;
 	margin-bottom: 20px;
-}
-
-.footer-widgets .widget-title {
-	color: $color-white;
 }

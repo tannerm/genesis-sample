@@ -10,26 +10,25 @@
 	margin-bottom: 0;
 }
 
-.archive-pagination {
+.archive-pagination li {
+	display: inline;
+}
 
-	li {
-		display: inline;
-	}
+.archive-pagination li a {
+	background-color: #fff;
+	color: #333;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 700;
+	padding: 8px 12px;
+	text-decoration: none;
+}
 
-	li a {
-		background-color: $color-mine-shaft;
-		color: $color-white;
-		cursor: pointer;
-		display: inline-block;
-		font-size: rem(16);
-		padding: 8px 12px;
-		text-decoration: none;
-	}
-
-	li a:hover,
-	li a:focus,
-	.active a {
-		background-color: $color-thunderbird;
-		text-decoration: underline;
-	}
+.archive-pagination li a:hover,
+.archive-pagination li a:focus,
+.archive-pagination .active a {
+	background-color: #cc3d25;
+	color: #fff;
 }

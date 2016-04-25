@@ -5,16 +5,19 @@
 	margin-bottom: 20px;
 }
 
+.after-entry,
 .archive-description,
 .author-box {
-	background-color: $color-white;
-	font-size: rem(16);
+	background-color: #fff;
+	font-size: 16px;
+	font-size: 1.6rem;
 	margin-bottom: 40px;
 	padding: 40px;
 }
 
 .author-box-title {
-	font-size: rem(16);
+	font-size: 16px;
+	font-size: 1.6rem;
 	margin-bottom: 4px;
 }
 

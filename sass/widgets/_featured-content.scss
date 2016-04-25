@@ -1,19 +1,18 @@
 /* ## Featured Content
 --------------------------------------------- */
 
-.featured-content {
-
-	.entry {
-		border-bottom: 2px solid $color-whitesmoke;
-		margin-bottom: 20px;
-		padding: 0 0 24px;
-	}
-
-	.entry-title {
-		font-size: rem(20);
-	}
+.featured-content .entry {
+	background: none;
+	margin-bottom: 20px;
+	padding: 0 0 24px;
 }
 
-.footer-widgets .entry {
-	border-bottom: 1px dotted $color-dove-gray;
+.featured-content .entry:last-of-type {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.featured-content .entry-title {
+	font-size: 20px;
+	font-size: 2rem;
 }
